@@ -7,8 +7,10 @@ end
 class Account
   attr_reader :ballance
 
-  def initialize(value)
+
+  def initialize(value, password)
     @ballance = value
+    @password = password || "railsgirlstricity"
   end
 
   def add_income(value)
