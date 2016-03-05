@@ -5,24 +5,22 @@ class Message
 end
 
 class Account
+  attr_reader :ballance
+
   def initialize(value)
     @ballance = value
   end
 
-  def ballance
-    return @ballance
-  end
-
   def add_income(value)
-    @ballance = @ballance + value
+    @ballance += value
   end
 
   def sub_income(value)
-    @ballance = @ballance - value
+    @ballance -= value
   end
 
   def status
-    if @ballance > 0
+    if ballance > 0
       puts "You are rich!!"
     else
       puts "Sorry time to work!!"
