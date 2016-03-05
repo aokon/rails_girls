@@ -20,13 +20,12 @@ class Account
   def sub_income(value)
     @ballance = @ballance - value
   end
+
+  def status
+    if @ballance > 0
+      puts "You are rich!!"
+    else
+      puts "Sorry time to work!!"
+    end
+  end
 end
-
-
-def show_message(name)
-  puts "#{name.upcase} Hello from file!!"
-end
-#puts "Insert your name: "
-#name = gets
-
-#hello_message name
